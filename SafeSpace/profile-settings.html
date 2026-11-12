@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Settings - SafeSpace</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-brand">
+                <h1>SafeSpace</h1>
+                <p class="tagline">Your Safe Haven for Mental Wellness</p>
+            </div>
+            <ul class="nav-links">
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="profile-settings.html" class="active">Settings</a></li>
+                <li><a href="notifications.html">Notifications</a></li>
+                <li><a href="index.html" class="btn-nav" onclick="logout()">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Settings Page Header -->
+    <div class="page-header">
+        <h1>Account Settings</h1>
+        <p>Manage your SafeSpace profile and preferences</p>
+    </div>
+
+    <!-- Settings Container -->
+    <section style="padding: 3rem 0;">
+        <div class="container">
+            <div class="settings-container">
+                <!-- Settings Sidebar Menu -->
+                <div class="settings-sidebar">
+                    <ul class="settings-menu">
+                        <li class="settings-menu-item">
+                            <a href="#" class="settings-menu-link active"  data-section="profile-section">
+                                <i class="fas fa-user"></i> Profile
+                            </a>
+                        </li>
+                        <li class="settings-menu-item">
+                            <a href="#" class="settings-menu-link" data-section="privacy-section">
+                                <i class="fas fa-shield-alt"></i> Privacy
+                            </a>
+                        </li>
+                        <li class="settings-menu-item">
+                            <a href="#" class="settings-menu-link" data-section="security-section">
+                                <i class="fas fa-lock"></i> Security
+                            </a>
+                        </li>
+                        <li class="settings-menu-item">
+                            <a href="#" class="settings-menu-link" data-section="notifications-section">
+                                <i class="fas fa-bell"></i> Notifications
+                            </a>
+                        </li>
+                        <li class="settings-menu-item">
+                            <a href="#" class="settings-menu-link" data-section="account-section">
+                                <i class="fas fa-cog"></i> Account
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Settings Content -->
+                <div class="settings-content">
+                    <!-- Profile Section -->
+                    <div id="profile-section" class="settings-section active">
+                        <h2>Profile Settings</h2>
+                        <form class="settings-form">
+                            <div class="form-group">
+                                <label for="username">Username</label>
+                                <input type="text" id="username" value="YourUsername" disabled>
+                                <small>Your username cannot be changed</small>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" value="user@example.com">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="nickname">Anonymous Nickname</label>
+                                <input type="text" id="nickname" placeholder="How you appear to others in posts">
+                                <small>This is your display name in the community. Keep it positive and appropriate.</small>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="bio">Bio (Optional)</label>
+                                <textarea id="bio" placeholder="Tell us about yourself (max 150 characters)" maxlength="150" style="min-height: 80px;"></textarea>
+                                <small>Share what you're comfortable with. This is public on your profile.</small>
+                            </div>
+
+                            <div class="form-actions">
+                                <button type="submit" class="btn btn-primary">Save Changes</button>
+                                <a href="dashboard.html" class="btn btn-secondary">Cancel</a>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Privacy Section -->
+                    <div id="privacy-section" class="settings-section">
+                        <h2>Privacy Settings</h2>
+                        <form class="settings-form">
+                            <div class="form-group checkbox">
+                                <input type="checkbox" id="profilePrivate" checked>
+                                <label for="profilePrivate">Keep my profile private</label>
+                            </div>
+
+                            <div class="form-group checkbox">
+                                <input type="checkbox" id="postsAnonymous" checked>
+                                <label for="postsAnonymous">All my posts are anonymous</label>
+                            </div>
+
+                            <div class="form-group checkbox">
+                                <input type="checkbox" id="viewActivity">
+                                <label for="viewActivity">Allow others to see my activity status</label>
+                            </div>
+
+                            <div class="form-group checkbox">
+                                <input type="checkbox" id="allowMessages">
+                                <label for="allowMessages">Allow direct messages from community</label>
+                            </div>
+
+                            <div class="form-actions">
+                                <button type="submit" class="btn btn-primary">Save Privacy Settings</button>
+                                <a href="dashboard.html" class="btn btn-secondary">Cancel</a>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Security Section -->
+                    <div id="security-section" class="settings-section">
+                        <h2>Security Settings</h2>
+                        <form class="settings-form">
+                            <div class="form-group">
+                                <label for="currentPassword">Current Password</label>
+                                <input type="password" id="currentPassword" placeholder="Enter your current password">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="newPassword">New Password</label>
+                                <input type="password" id="newPassword" placeholder="Enter your new password">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="confirmNewPassword">Confirm New Password</label>
+                                <input type="password" id="confirmNewPassword" placeholder="Confirm your new password">
+                            </div>
+
+                            <div style="background: var(--light-gray); padding: 1rem; border-radius: 5px; margin-bottom: 1.5rem; font-size: 0.9rem; color: var(--text-secondary);">
+                                <strong>Password Requirements:</strong>
+                                <div>✓ At least 8 characters</div>
+                                <div>✓ Combination of letters and numbers</div>
+                                <div>✓ At least one uppercase letter</div>
+                            </div>
+
+                            <div class="form-group checkbox">
+                                <input type="checkbox" id="twoFactor">
+                                <label for="twoFactor">Enable Two-Factor Authentication (Coming Soon)</label>
+                            </div>
+
+                            <div class="form-actions">
+                                <button type="submit" class="btn btn-primary">Update Password</button>
+                                <a href="dashboard.html" class="btn btn-secondary">Cancel</a>
+                            </div>
+                        </form>
+
+                        <div style="margin-top: 2rem; padding: 1.5rem; background: var(--light-gray); border-radius: 8px;">
+                            <h4 style="color: var(--text-primary); margin-bottom: 1rem;">Active Sessions</h4>
+                            <p style="color: var(--text-secondary); margin-bottom: 1rem;">Current Device: This Browser</p>
+                            <button class="btn btn-secondary">Logout All Other Sessions</button>
+                        </div>
+                    </div>
+
+                    <!-- Notifications Section -->
+                    <div id="notifications-section" class="settings-section">
+                        <h2>Notification Preferences</h2>
+                        <form class="settings-form">
+                            <h4 style="color: var(--text-primary); margin-top: 0; margin-bottom: 1rem;">Email Notifications</h4>
+                            
+                            <div class="form-group checkbox">
+                                <input type="checkbox" id="emailReplies" checked>
+                                <label for="emailReplies">When someone replies to my post</label>
+                            </div>
+
+                            <div class="form-group checkbox">
+                                <input type="checkbox" id="emailReminders" checked>
+                                <label for="emailReminders">Daily mood check-in reminders</label>
+                            </div>
+
+                            <div class="form-group checkbox">
+                                <input type="checkbox" id="emailNews">
+                                <label for="emailNews">SafeSpace news and updates</label>
+                            </div>
+
+                            <div class="form-group checkbox">
+                                <input type="checkbox" id="emailSecurity">
+                                <label for="emailSecurity">Important security alerts only</label>
+                            </div>
+
+                            <h4 style="color: var(--text-primary); margin-top: 2rem; margin-bottom: 1rem;">In-App Notifications</h4>
+
+                            <div class="form-group checkbox">
+                                <input type="checkbox" id="appReplies" checked>
+                                <label for="appReplies">Post replies and mentions</label>
+                            </div>
+
+                            <div class="form-group checkbox">
+                                <input type="checkbox" id="appMessages" checked>
+                                <label for="appMessages">Direct messages</label>
+                            </div>
+
+                            <div class="form-actions">
+                                <button type="submit" class="btn btn-primary">Save Notification Settings</button>
+                                <a href="dashboard.html" class="btn btn-secondary">Cancel</a>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Account Section -->
+                    <div id="account-section" class="settings-section">
+                        <h2>Account Management</h2>
+
+                        <div style="background: var(--light-gray); padding: 2rem; border-radius: 8px; margin-bottom: 2rem;">
+                            <h4 style="color: var(--text-primary); margin-bottom: 1rem;">Account Information</h4>
+                            <p><strong>Username:</strong> YourUsername</p>
+                            <p><strong>Email:</strong> user@example.com</p>
+                            <p><strong>Member Since:</strong> March 15, 2024</p>
+                            <p><strong>Total Posts:</strong> 24</p>
+                            <p><strong>Contributions:</strong> 156 supportive comments</p>
+                        </div>
+
+                        <div style="background: var(--light-gray); padding: 2rem; border-radius: 8px; margin-bottom: 2rem;">
+                            <h4 style="color: var(--text-primary); margin-bottom: 1rem;">Download Your Data</h4>
+                            <p style="color: var(--text-secondary); margin-bottom: 1rem;">
+                                Download a copy of your data including posts, journal entries, and mood history.
+                            </p>
+                            <button class="btn btn-secondary">Download Data (JSON)</button>
+                        </div>
+
+                        <div class="danger-zone">
+                            <h3>Danger Zone</h3>
+                            <p>These actions cannot be undone. Please proceed with caution.</p>
+
+                            <div style="margin-bottom: 1.5rem;">
+                                <h4 style="color: var(--text-primary); margin-bottom: 0.5rem;">Deactivate Account</h4>
+                                <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1rem;">
+                                    Your account will be temporarily disabled. You can reactivate it by logging in again within 30 days.
+                                </p>
+                                <button class="btn btn-secondary">Deactivate Account</button>
+                            </div>
+
+                            <div>
+                                <h4 style="color: #E74C3C; margin-bottom: 0.5rem;">Delete Account Permanently</h4>
+                                <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1rem;">
+                                    This will permanently delete your account and all associated data. This action cannot be undone.
+                                </p>
+                                <button class="delete-btn" onclick="confirmDelete('Are you sure you want to permanently delete your account? All your data will be lost.')">Delete Account Permanently</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>SafeSpace</h4>
+                    <p>Your mental health journey matters. We're here to support you.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="dashboard.html">Dashboard</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 SafeSpace. All rights reserved. | Your Control Your Data</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - SafeSpace</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-brand">
+                <h1>SafeSpace</h1>
+                <p class="tagline">Your Safe Haven for Mental Wellness</p>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="login.html" class="btn-nav active">Login</a></li>
+                <li><a href="register.html" class="btn-nav btn-primary">Sign Up</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <div class="page-header">
+        <h1>Welcome Back</h1>
+        <p>Log in to your SafeSpace account</p>
+    </div>
+
+    <!-- Login Container -->
+    <div class="login-container">
+        <form id="loginForm">
+            <h2>Secure Login</h2>
+
+            <div class="form-group">
+                <label for="loginEmail">Email Address</label>
+                <input type="email" id="loginEmail" name="email" placeholder="your.email@example.com" required>
+            </div>
+
+            <div class="form-group">
+                <label for="loginPassword">Password</label>
+                <input type="password" id="loginPassword" name="password" placeholder="Enter your password" required>
+                <div class="forgot-link">
+                    <a href="forgot-password.html">Forgot your password?</a>
+                </div>
+            </div>
+
+            <div class="remember-me">
+                <input type="checkbox" id="rememberMe" name="rememberMe">
+                <label for="rememberMe">Remember me on this device</label>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%; margin-bottom: 1rem;">Login</button>
+        </form>
+
+        <div class="login-footer">
+            <p>Don't have an account? <a href="register.html">Sign up here</a></p>
+        </div>
+
+        <div style="text-align: center; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid #E6D5F0;">
+            <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1rem;">
+                <i class="fas fa-lock"></i> Your data is encrypted and secure
+            </p>
+            <a href="index.html" class="btn btn-secondary" style="width: 100%;">Back to Home</a>
+        </div>
+    </div>
+
+    <!-- FAQs for Login -->
+    <section style="background: var(--light-gray); padding: 3rem 0; margin-top: 3rem;">
+        <div class="container" style="max-width: 600px;">
+            <h2 style="text-align: center; margin-bottom: 2rem;">Login Help</h2>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>What if I forget my password?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    Click on "Forgot your password?" below the login form. We'll send you a reset link to your email address.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Is my login information secure?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    Yes! We use industry-standard encryption (SSL/TLS) to protect your data. Your password is never stored in plain text.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>What does "Remember me" do?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    If checked, we'll save your email address on this device. You'll still need to enter your password for security.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Can I login from multiple devices?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    Yes! You can access your SafeSpace account from any device. Just log in with your credentials.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>SafeSpace</h4>
+                    <p>Your mental health journey matters. We're here to support you.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="register.html">Register</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 SafeSpace. All rights reserved. | Secure & Private</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SafeSpace - Mental Health Support Community</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-brand">
+                <h1>SafeSpace</h1>
+                <p class="tagline">Your Safe Haven for Mental Wellness</p>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="support.html">Support Feed</a></li>
+                <li><a href="login.html" class="btn-nav">Login</a></li>
+                <li><a href="register.html" class="btn-nav btn-primary">Sign Up</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Welcome to SafeSpace</h1>
+            <p class="hero-subtitle">A judgment-free community where your mental health matters</p>
+            <div class="hero-buttons">
+                <a href="register.html" class="btn btn-primary btn-lg">Get Started Today</a>
+                <a href="#support" class="btn btn-secondary btn-lg">Get Support Now</a>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="decorative-shape"></div>
+        </div>
+    </section>
+
+    <section class="mission">
+        <div class="container">
+            <h2>Our Mission</h2>
+            <p class="mission-text">
+                SafeSpace is dedicated to creating a supportive, anonymous community where individuals can share their mental health journeys, seek support, and connect with others facing similar challenges—all without fear of judgment or stigma.
+            </p>
+            <div class="mission-cards">
+                <div class="mission-card">
+                    <i class="fas fa-heart"></i>
+                    <h3>Compassionate</h3>
+                    <p>We prioritize empathy and understanding in every interaction</p>
+                </div>
+                <div class="mission-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Secure</h3>
+                    <p>Your privacy and anonymity are our top priorities</p>
+                </div>
+                <div class="mission-card">
+                    <i class="fas fa-handshake"></i>
+                    <h3>Supportive</h3>
+                    <p>We believe in the power of community and peer support</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="awareness-banner">
+        <div class="container">
+            <div class="awareness-content">
+                <h2>Did You Know?</h2>
+                <p>1 in 5 adults experience mental illness each year. You're not alone. Mental health is just as important as physical health, and seeking support is a sign of strength, not weakness.</p>
+                <div class="awareness-stats">
+                    <div class="stat">
+                        <span class="stat-number">1 in 5</span>
+                        <span class="stat-label">Adults with Mental Illness</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">43%</span>
+                        <span class="stat-label">Delay Seeking Help Due to Stigma</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">80%</span>
+                        <span class="stat-label">Recover With Proper Support</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="quick-access">
+        <div class="container">
+            <h2>Quick Access to Resources</h2>
+            <div class="features-grid">
+                <div class="feature-box">
+                    <i class="fas fa-comments"></i>
+                    <h3>Anonymous Feed</h3>
+                    <p>Share your thoughts and connect with supportive community members</p>
+                </div>
+                <div class="feature-box">
+                    <i class="fas fa-lightbulb"></i>
+                    <h3>Wellness Tips</h3>
+                    <p>Access helpful resources and daily wellness advice</p>
+                </div>
+                <div class="feature-box">
+                    <i class="fas fa-users"></i>
+                    <h3>Support Groups</h3>
+                    <p>Join communities with people facing similar challenges</p>
+                </div>
+                <div class="feature-box">
+                    <i class="fas fa-phone"></i>
+                    <h3>Crisis Resources</h3>
+                    <p>24/7 access to emergency mental health support numbers</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="quotes">
+        <div class="container">
+            <h2>Words of Inspiration</h2>
+            <div class="quotes-carousel">
+                <div class="quote-card active">
+                    <p class="quote-text">"Your mental health is a priority, not a luxury."</p>
+                    <p class="quote-author">— SafeSpace Community</p>
+                </div>
+                <div class="quote-card">
+                    <p class="quote-text">"It's okay to not be okay. What matters is that you're reaching out."</p>
+                    <p class="quote-author">— SafeSpace Community</p>
+                </div>
+                <div class="quote-card">
+                    <p class="quote-text">"You are stronger than you think, and you deserve support."</p>
+                    <p class="quote-author">— SafeSpace Community</p>
+                </div>
+                <div class="quote-card">
+                    <p class="quote-text">"In a world where you can be anything, be kind—especially to yourself."</p>
+                    <p class="quote-author">— SafeSpace Community</p>
+                </div>
+            </div>
+            <div class="quote-controls">
+                <button class="quote-btn prev" onclick="previousQuote()"><i class="fas fa-chevron-left"></i></button>
+                <button class="quote-btn next" onclick="nextQuote()"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <section id="support" class="support-cta">
+        <div class="container">
+            <h2>Ready to Take the First Step?</h2>
+            <p>Join thousands of people who have found support and community at SafeSpace</p>
+            <div class="support-buttons">
+                <a href="register.html" class="btn btn-primary btn-lg">Create Your Account</a>
+                <a href="dashboard.html" class="btn btn-secondary btn-lg">View Anonymous Feed</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="crisis-resources">
+        <div class="container">
+            <h3>In Crisis? Immediate Resources Available 24/7</h3>
+            <div class="resources-row">
+                <div class="resource-item">
+                    <i class="fas fa-phone-alt"></i>
+                    <p><strong>National Suicide Prevention Lifeline</strong><br>988 (Call or Text)</p>
+                </div>
+                <div class="resource-item">
+                    <i class="fas fa-comment-dots"></i>
+                    <p><strong>Crisis Text Line</strong><br>Text HOME to 741741</p>
+                </div>
+                <div class="resource-item">
+                    <i class="fas fa-globe"></i>
+                    <p><strong>International Association for Suicide Prevention</strong><br>Visit iasp.info/resources</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>SafeSpace</h4>
+                    <p>Your mental health journey matters. We're here to support you.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="login.html">Login</a></li>
+                        <li><a href="register.html">Register</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#" title="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 SafeSpace. All rights reserved. | Mental Health Matters</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

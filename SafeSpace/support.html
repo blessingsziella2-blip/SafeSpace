@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anonymous Support Feed - SafeSpace</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-brand">
+                <h1>SafeSpace</h1>
+                <p class="tagline">Your Safe Haven for Mental Wellness</p>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="support.html" class="active">Support Feed</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="profile-settings.html">Settings</a></li>
+                <li><a href="index.html" class="btn-nav" onclick="logout()">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <div class="page-header">
+        <h1>Anonymous Support Feed</h1>
+        <p>Connect, share, and support others in our safe community</p>
+    </div>
+
+    <!-- Support Feed Section -->
+    <section style="padding: 2rem 0;">
+        <div class="container">
+            <div class="feed-container">
+                <!-- Posts Column -->
+                <div class="posts-section">
+                    <div style="margin-bottom: 2rem;">
+                        <a href="create-post.html" class="btn btn-primary" style="width: 100%; text-align: center;">
+                            <i class="fas fa-plus"></i> Share Your Story Anonymously
+                        </a>
+                    </div>
+
+                    <!-- Post 1 -->
+                    <div class="post-card">
+                        <div class="post-meta">
+                            <span>Anonymous User</span>
+                            <span class="post-mood">😔 Anxious</span>
+                            <span style="font-size: 0.85rem; color: #95A5A6;">2 hours ago</span>
+                        </div>
+                        <div class="post-warning">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            <span>Trigger Warning: Anxiety Discussion</span>
+                        </div>
+                        <div class="post-text">
+                            "I've been struggling with anxiety for weeks now. It's affecting my sleep and productivity. Anyone else dealing with similar issues? Would love to hear what coping strategies you use. It helps to know I'm not alone in this."
+                        </div>
+                        <div class="post-actions">
+                            <button class="post-action-btn like"><i class="fas fa-heart"></i> 24</button>
+                            <button class="post-action-btn"><i class="fas fa-reply"></i> 8 Replies</button>
+                            <button class="post-action-btn"><i class="fas fa-share"></i> Share</button>
+                            <button class="post-action-btn"><i class="fas fa-flag"></i> Report</button>
+                        </div>
+                    </div>
+
+                    <!-- Post 2 -->
+                    <div class="post-card">
+                        <div class="post-meta">
+                            <span>Anonymous User</span>
+                            <span class="post-mood">😊 Hopeful</span>
+                            <span style="font-size: 0.85rem; color: #95A5A6;">4 hours ago</span>
+                        </div>
+                        <div class="post-text">
+                            "Just completed my first week of therapy! It's scary but also feels like a step in the right direction. To anyone considering it - you're brave for taking care of yourself. Let's keep supporting each other! 💪"
+                        </div>
+                        <div class="post-actions">
+                            <button class="post-action-btn like"><i class="fas fa-heart"></i> 142</button>
+                            <button class="post-action-btn"><i class="fas fa-reply"></i> 23 Replies</button>
+                            <button class="post-action-btn"><i class="fas fa-share"></i> Share</button>
+                            <button class="post-action-btn"><i class="fas fa-flag"></i> Report</button>
+                        </div>
+                    </div>
+
+                    <!-- Post 3 -->
+                    <div class="post-card">
+                        <div class="post-meta">
+                            <span>Anonymous User</span>
+                            <span class="post-mood">🤔 Confused</span>
+                            <span style="font-size: 0.85rem; color: #95A5A6;">6 hours ago</span>
+                        </div>
+                        <div class="post-warning">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            <span>Trigger Warning: Depression Mentioned</span>
+                        </div>
+                        <div class="post-text">
+                            "Has anyone experienced depression that comes and goes? Some days I feel fine and motivated, then other days I can barely get out of bed. Is this normal? I'm trying to understand my patterns better."
+                        </div>
+                        <div class="post-actions">
+                            <button class="post-action-btn like"><i class="fas fa-heart"></i> 45</button>
+                            <button class="post-action-btn"><i class="fas fa-reply"></i> 12 Replies</button>
+                            <button class="post-action-btn"><i class="fas fa-share"></i> Share</button>
+                            <button class="post-action-btn"><i class="fas fa-flag"></i> Report</button>
+                        </div>
+                    </div>
+
+                    <!-- Post 4 -->
+                    <div class="post-card">
+                        <div class="post-meta">
+                            <span>Anonymous User</span>
+                            <span class="post-mood">💪 Encouraged</span>
+                            <span style="font-size: 0.85rem; color: #95A5A6;">8 hours ago</span>
+                        </div>
+                        <div class="post-text">
+                            "Trying a new grounding technique today - 5-4-3-2-1 sensory method. Help! What are your favorite coping strategies? I want to build a collection of tools that actually work for me."
+                        </div>
+                        <div class="post-actions">
+                            <button class="post-action-btn like"><i class="fas fa-heart"></i> 87</button>
+                            <button class="post-action-btn"><i class="fas fa-reply"></i> 31 Replies</button>
+                            <button class="post-action-btn"><i class="fas fa-share"></i> Share</button>
+                            <button class="post-action-btn"><i class="fas fa-flag"></i> Report</button>
+                        </div>
+                    </div>
+
+                    <!-- Post 5 -->
+                    <div class="post-card">
+                        <div class="post-meta">
+                            <span>Anonymous User</span>
+                            <span class="post-mood">😌 Peaceful</span>
+                            <span style="font-size: 0.85rem; color: #95A5A6;">10 hours ago</span>
+                        </div>
+                        <div class="post-text">
+                            "Meditation for 10 minutes this morning and I already feel more centered. Didn't think it would work for me, but here we are! If you've never tried it, give it a chance - you might surprise yourself."
+                        </div>
+                        <div class="post-actions">
+                            <button class="post-action-btn like"><i class="fas fa-heart"></i> 156</button>
+                            <button class="post-action-btn"><i class="fas fa-reply"></i> 28 Replies</button>
+                            <button class="post-action-btn"><i class="fas fa-share"></i> Share</button>
+                            <button class="post-action-btn"><i class="fas fa-flag"></i> Report</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar Column -->
+                <div class="sidebar">
+                    <!-- Filters Card -->
+                    <div class="sidebar-card">
+                        <h3><i class="fas fa-filter"></i> Filters</h3>
+                        <div class="filter-group">
+                            <label>Sort By</label>
+                            <select>
+                                <option>Most Recent</option>
+                                <option>Most Popular</option>
+                                <option>Most Discussed</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <label>Mood Filter</label>
+                            <select>
+                                <option>All Moods</option>
+                                <option>😊 Happy</option>
+                                <option>😔 Sad</option>
+                                <option>😰 Anxious</option>
+                                <option>😤 Frustrated</option>
+                                <option>😌 Peaceful</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <label>Needs Support</label>
+                            <select>
+                                <option>All Posts</option>
+                                <option>Most Replies Needed</option>
+                                <option>Newest First</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Community Guidelines Card -->
+                    <div class="sidebar-card">
+                        <h3><i class="fas fa-heart"></i> Community Guidelines</h3>
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="margin-bottom: 0.8rem;"><strong>Be Kind:</strong> Comments should be supportive</li>
+                            <li style="margin-bottom: 0.8rem;"><strong>Stay Safe:</strong> No harmful content</li>
+                            <li style="margin-bottom: 0.8rem;"><strong>Respect Privacy:</strong> Keep anonymity safe</li>
+                            <li style="margin-bottom: 0.8rem;"><strong>No Spam:</strong> Keep discussions genuine</li>
+                            <li><strong>Report Issues:</strong> Use the report button</li>
+                        </ul>
+                    </div>
+
+                    <!-- Resources Card -->
+                    <div class="sidebar-card">
+                        <h3><i class="fas fa-book"></i> Quick Resources</h3>
+                        <a href="resources.html" style="display: block; padding: 0.75rem; background: var(--soft-lavender); border-radius: 5px; text-decoration: none; color: var(--primary-blue); margin-bottom: 0.5rem; text-align: center; font-weight: 600;">📚 Learning Center</a>
+                        <a href="chat.html" style="display: block; padding: 0.75rem; background: var(--light-teal); border-radius: 5px; text-decoration: none; color: var(--primary-blue); margin-bottom: 0.5rem; text-align: center; font-weight: 600;">💬 Chat Support</a>
+                        <a href="emergency.html" style="display: block; padding: 0.75rem; background: #FFE5E5; border-radius: 5px; text-decoration: none; color: #E74C3C; text-align: center; font-weight: 600;">🆘 Emergency Help</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Crisis Resources -->
+    <section class="crisis-resources">
+        <div class="container">
+            <h3>Need Immediate Help?</h3>
+            <div class="resources-row">
+                <div class="resource-item">
+                    <i class="fas fa-phone-alt"></i>
+                    <p><strong>National Suicide Prevention Lifeline</strong><br>988 (Call or Text)</p>
+                </div>
+                <div class="resource-item">
+                    <i class="fas fa-comment-dots"></i>
+                    <p><strong>Crisis Text Line</strong><br>Text HOME to 741741</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>SafeSpace</h4>
+                    <p>Your mental health journey matters. We're here to support you.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="resources.html">Resources</a></li>
+                        <li><a href="chat.html">Chat Support</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Account</h4>
+                    <ul>
+                        <li><a href="profile-settings.html">Settings</a></li>
+                        <li><a href="notifications.html">Notifications</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 SafeSpace. All rights reserved. | Keep supporting each other</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

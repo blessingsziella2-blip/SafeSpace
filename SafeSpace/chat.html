@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Support - SafeSpace</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-brand">
+                <h1>SafeSpace</h1>
+                <p class="tagline">Your Safe Haven for Mental Wellness</p>
+            </div>
+            <ul class="nav-links">
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="chat.html" class="active">Chat Support</a></li>
+                <li><a href="support.html">Support Feed</a></li>
+                <li><a href="profile-settings.html">Settings</a></li>
+                <li><a href="index.html" class="btn-nav" onclick="logout()">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Chat Container -->
+    <section style="padding: 1rem 0; min-height: calc(100vh - 150px);">
+        <div class="container">
+            <div class="chat-container">
+                <!-- Sidebar with Chat List -->
+                <div class="chat-sidebar">
+                    <div style="margin-bottom: 1rem;">
+                        <input type="text" placeholder="Search conversations..." style="width: 100%; padding: 0.5rem; border: 1px solid var(--border-light); border-radius: 5px; font-size: 0.9rem;">
+                    </div>
+                    
+                    <div class="chat-list-item active">
+                        <div style="font-weight: 600; margin-bottom: 0.3rem;">Peer Support</div>
+                        <small style="color: var(--text-secondary);">Talk to a peer counselor</small>
+                    </div>
+                    
+                    <div class="chat-list-item">
+                        <div style="font-weight: 600; margin-bottom: 0.3rem;">Mental Health Chatbot</div>
+                        <small style="color: var(--text-secondary);">AI-powered support available</small>
+                    </div>
+
+                    <hr style="margin: 1rem 0; border: none; border-top: 1px solid var(--border-light);">
+
+                    <div style="color: var(--text-secondary); font-size: 0.85rem; padding: 0 1rem;">
+                        <strong>Active Users:</strong> 124
+                    </div>
+                </div>
+
+                <!-- Chat Window -->
+                <div class="chat-window">
+                    <!-- Chat Header -->
+                    <div class="chat-header">
+                        <h3>Peer Support</h3>
+                        <small style="opacity: 0.8;">Online • Ready to listen</small>
+                    </div>
+
+                    <!-- Chat Messages -->
+                    <div class="chat-messages">
+                        <div style="text-align: center; color: var(--text-secondary); padding: 1rem; font-size: 0.9rem;">
+                            Conversation started today
+                        </div>
+
+                        <div class="message received">
+                            <div class="message-bubble">
+                                Hi there! Welcome to SafeSpace Chat Support. I'm here to listen and support you. How are you doing today? 🙂
+                            </div>
+                            <span class="message-time">9:30 AM</span>
+                        </div>
+
+                        <div class="message sent">
+                            <div class="message-bubble">
+                                Thanks for being here. I've been having a rough week with anxiety.
+                            </div>
+                            <span class="message-time">9:32 AM</span>
+                        </div>
+
+                        <div class="message received">
+                            <div class="message-bubble">
+                                I hear you. Anxiety can be really overwhelming. Would you like to talk about what's been contributing to these feelings? Remember, there's no judgment here - this is a safe space.
+                            </div>
+                            <span class="message-time">9:33 AM</span>
+                        </div>
+
+                        <div class="message sent">
+                            <div class="message-bubble">
+                                It's mostly about work pressure and perfectionism. I know I need to be easier on myself but it's hard.
+                            </div>
+                            <span class="message-time">9:35 AM</span>
+                        </div>
+
+                        <div class="message received">
+                            <div class="message-bubble">
+                                That's actually very self-aware of you to recognize that! The fact that you can identify this pattern is a huge step. Many people struggle with perfectionism. What does "being easier on yourself" look like for you?
+                            </div>
+                            <span class="message-time">9:36 AM</span>
+                        </div>
+                    </div>
+
+                    <!-- Chat Input -->
+                    <div class="chat-input">
+                        <input type="text" class="chat-input-field" placeholder="Type your message here... (Shift+Enter for new line)">
+                        <button class="chat-send-btn" title="Send message">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chat Guidelines -->
+    <section style="padding: 3rem 0; background: var(--light-gray);">
+        <div class="container" style="max-width: 700px;">
+            <h2 style="color: var(--primary-blue); text-align: center; margin-bottom: 2rem;">
+                Chat Support Guidelines
+            </h2>
+            <div style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);">
+                <h4 style="color: var(--primary-blue); margin-bottom: 1rem;">
+                    <i class="fas fa-heart"></i> Our Approach
+                </h4>
+                <ul style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 2rem;">
+                    <li>✅ Non-judgmental and supportive</li>
+                    <li>✅ Confidential and private</li>
+                    <li>✅ Available 24/7</li>
+                    <li>✅ Trained peer counselors and AI support</li>
+                </ul>
+
+                <h4 style="color: var(--primary-blue); margin-bottom: 1rem;">
+                    <i class="fas fa-list-check"></i> How to Get the Most Out of Chat
+                </h4>
+                <ul style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 2rem;">
+                    <li>Be honest about how you're feeling</li>
+                    <li>Take your time expressing yourself</li>
+                    <li>Remember this is support, not a replacement for therapy</li>
+                    <li>For emergencies, call 988 immediately</li>
+                </ul>
+
+                <h4 style="color: #E74C3C; margin-bottom: 1rem;">
+                    <i class="fas fa-triangle-exclamation"></i> Not an Emergency Service
+                </h4>
+                <p style="color: var(--text-secondary);">
+                    If you or someone you know is in immediate danger, please call 911 or visit the nearest emergency room. Chat support is for emotional support and wellness conversations, not crisis intervention.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>SafeSpace</h4>
+                    <p>Your mental health journey matters. We're here to support you.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="emergency.html">Emergency Help</a></li>
+                        <li><a href="resources.html">Resources</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 SafeSpace. All rights reserved. | We're listening</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mood Tracker - SafeSpace</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-brand">
+                <h1>SafeSpace</h1>
+                <p class="tagline">Your Safe Haven for Mental Wellness</p>
+            </div>
+            <ul class="nav-links">
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="mood-tracker.html" class="active">Mood Tracker</a></li>
+                <li><a href="journal.html">Journal</a></li>
+                <li><a href="profile-settings.html">Settings</a></li>
+                <li><a href="index.html" class="btn-nav" onclick="logout()">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Tracker Header -->
+    <div class="tracker-header">
+        <div class="container">
+            <h2>Your Mood Tracker</h2>
+            <p>Monitor your emotional wellbeing over time</p>
+        </div>
+    </div>
+
+    <!-- Tracker Content -->
+    <section style="padding: 3rem 0;">
+        <div class="container">
+            <div class="tracker-container">
+                <!-- Mood Input Section -->
+                <div class="mood-input-section">
+                    <h3><i class="fas fa-smile"></i> Log Today's Mood</h3>
+                    <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">How are you feeling right now?</p>
+
+                    <div class="daily-mood-options">
+                        <button class="mood-btn" title="Excellent" data-mood="excellent">😊</button>
+                        <button class="mood-btn" title="Good" data-mood="good">🙂</button>
+                        <button class="mood-btn" title="Neutral" data-mood="neutral">😐</button>
+                        <button class="mood-btn" title="Not Great" data-mood="notgreat">😔</button>
+                        <button class="mood-btn" title="Distressed" data-mood="distressed">😢</button>
+                    </div>
+
+                    <label for="moodNotes" style="display: block; margin-top: 1.5rem; margin-bottom: 0.5rem;">
+                        <strong>Notes (Optional)</strong>
+                    </label>
+                    <textarea class="mood-notes" id="moodNotes" placeholder="What things influenced your mood today? What triggered positive or negative feelings?"></textarea>
+
+                    <button class="save-mood-btn" id="saveMoodBtn">
+                        <i class="fas fa-heart"></i> Save Mood Entry
+                    </button>
+                </div>
+
+                <!-- Chart Section -->
+                <div class="chart-section">
+                    <h3><i class="fas fa-chart-line"></i> Weekly Mood Chart</h3>
+                    <div class="chart-placeholder">
+                        <div>
+                            <p style="font-size: 2rem; margin-bottom: 1rem;">📊</p>
+                            <p>Your mood trends will appear here</p>
+                            <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 1rem;">Track your emotions daily to see patterns</p>
+                        </div>
+                    </div>
+
+                    <div class="mood-history">
+                        <h4 style="margin-top: 2rem; margin-bottom: 1rem; color: var(--text-primary);">Recent Mood Entries</h4>
+                        <div class="history-item">
+                            <div>
+                                <div class="history-date">Today, May 12</div>
+                                <div class="history-mood">😐</div>
+                            </div>
+                        </div>
+                        <div class="history-item">
+                            <div>
+                                <div class="history-date">May 11</div>
+                                <div class="history-mood">🙂</div>
+                            </div>
+                        </div>
+                        <div class="history-item">
+                            <div>
+                                <div class="history-date">May 10</div>
+                                <div class="history-mood">😊</div>
+                            </div>
+                        </div>
+                        <div class="history-item">
+                            <div>
+                                <div class="history-date">May 9</div>
+                                <div class="history-mood">😔</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mood Insights -->
+            <div style="margin-top: 3rem; background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);">
+                <h3 style="color: var(--primary-blue); margin-bottom: 1.5rem;"><i class="fas fa-lightbulb"></i> Mood Insights</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem;">
+                    <div style="background: var(--light-gray); padding: 1.5rem; border-radius: 8px;">
+                        <strong>This Week Average</strong>
+                        <p style="font-size: 1.8rem; color: var(--primary-blue); margin: 0.5rem 0;">😊 Good</p>
+                        <small style="color: var(--text-secondary);">↑ 15% from last week</small>
+                    </div>
+                    <div style="background: var(--light-gray); padding: 1.5rem; border-radius: 8px;">
+                        <strong>Best Day This Week</strong>
+                        <p style="font-size: 1.8rem; color: var(--primary-blue); margin: 0.5rem 0;">May 10</p>
+                        <small style="color: var(--text-secondary);">You felt particularly positive</small>
+                    </div>
+                    <div style="background: var(--light-gray); padding: 1.5rem; border-radius: 8px;">
+                        <strong>Streak</strong>
+                        <p style="font-size: 1.8rem; color: var(--primary-blue); margin: 0.5rem 0;">12 Days</p>
+                        <small style="color: var(--text-secondary);">Keep tracking your moods!</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tips Based on Mood -->
+            <div style="margin-top: 3rem; background: var(--soft-lavender); padding: 2rem; border-radius: 10px;">
+                <h3 style="color: var(--primary-blue); margin-bottom: 1rem;"><i class="fas fa-heart"></i> Wellness Tips for Your Mood</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+                    <div style="background: white; padding: 1rem; border-radius: 8px;">
+                        <strong>🧘 Meditation</strong>
+                        <p style="color: var(--text-secondary); font-size: 0.9rem;">Try a 10-minute mindfulness exercise</p>
+                    </div>
+                    <div style="background: white; padding: 1rem; border-radius: 8px;">
+                        <strong>🚶 Movement</strong>
+                        <p style="color: var(--text-secondary); font-size: 0.9rem;">Take a walk or light exercise</p>
+                    </div>
+                    <div style="background: white; padding: 1rem; border-radius: 8px;">
+                        <strong>💬 Connect</strong>
+                        <p style="color: var(--text-secondary); font-size: 0.9rem;">Share in the support feed</p>
+                    </div>
+                    <div style="background: white; padding: 1rem; border-radius: 8px;">
+                        <strong>📚 Learn</strong>
+                        <p style="color: var(--text-secondary); font-size: 0.9rem;">Check our resources section</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>SafeSpace</h4>
+                    <p>Your mental health journey matters. We're here to support you.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="dashboard.html">Dashboard</a></li>
+                        <li><a href="journal.html">Journal</a></li>
+                        <li><a href="resources.html">Resources</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 SafeSpace. All rights reserved. | Track Your Wellness</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

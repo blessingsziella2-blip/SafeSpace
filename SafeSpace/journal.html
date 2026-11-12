@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Journal - SafeSpace</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-brand">
+                <h1>SafeSpace</h1>
+                <p class="tagline">Your Safe Haven for Mental Wellness</p>
+            </div>
+            <ul class="nav-links">
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="mood-tracker.html">Mood Tracker</a></li>
+                <li><a href="journal.html" class="active">Journal</a></li>
+                <li><a href="profile-settings.html">Settings</a></li>
+                <li><a href="index.html" class="btn-nav" onclick="logout()">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Journal Header -->
+    <div class="journal-header">
+        <div class="container">
+            <h1><i class="fas fa-book"></i> Your Private Journal</h1>
+            <p>A safe space for your personal reflection and thoughts - completely private</p>
+        </div>
+    </div>
+
+    <!-- Journal Content -->
+    <section style="padding: 3rem 0;">
+        <div class="container">
+            <div class="journal-container">
+                <!-- Previous Entries Display -->
+                <div class="journal-entries">
+                    <h2 style="color: var(--primary-blue); margin-bottom: 2rem;">Previous Entries</h2>
+                    
+                    <div class="journal-entry">
+                        <div class="entry-date">May 10, 2026 · 2:30 PM</div>
+                        <div class="entry-title">A Day of Quiet Reflection</div>
+                        <div class="entry-content">
+                            Today was a good day. I had some quiet time to myself and spent it on the things I love. The anxiety that's been following me seems a bit lighter. I realized that sometimes the best thing I can do for myself is to just pause and breathe. I'm proud of the progress I've made this week.
+                        </div>
+                        <span class="entry-mood">😊 Happy</span>
+                    </div>
+
+                    <hr style="margin: 2rem 0; border: none; border-top: 2px solid #E6D5F0;">
+
+                    <div class="journal-entry">
+                        <div class="entry-date">May 8, 2026 · 7:15 PM</div>
+                        <div class="entry-title">Struggling but Not Giving Up</div>
+                        <div class="entry-content">
+                            Today was tough. I had a difficult interaction with someone that brought up old insecurities. But I'm writing this to remind myself that I'm stronger than I think. I reached out to a friend, and just talking about it helped. I'm learning that asking for help is not weakness—it's wisdom.
+                        </div>
+                        <span class="entry-mood">😔 Sad</span>
+                    </div>
+
+                    <hr style="margin: 2rem 0; border: none; border-top: 2px solid #E6D5F0;">
+
+                    <div style="text-align: center; padding: 2rem; color: var(--text-secondary);">
+                        <p style="margin-bottom: 1rem;">--- Earlier Entries ---</p>
+                        <a href="#" style="color: var(--primary-blue); text-decoration: none; font-weight: 600;">Load more entries</a>
+                    </div>
+                </div>
+
+                <!-- New Entry Form -->
+                <div class="new-entry-form">
+                    <h3><i class="fas fa-pen"></i> Write a New Entry</h3>
+                    <p style="color: var(--text-secondary); margin-bottom: 1.5rem; font-size: 0.95rem;">
+                        This is your private space. Nothing you write here is shared with anyone. Take your time, be honest, and express yourself freely.
+                    </p>
+
+                    <form id="journalForm">
+                        <label for="entryTitle" style="display: block; margin-bottom: 0.5rem; font-weight: 600;">
+                            Entry Title
+                        </label>
+                        <input type="text" class="entry-input" id="entryTitle" placeholder="Give your entry a title (e.g., 'A Day of Reflection')" required>
+
+                        <label for="entryContent" style="display: block; margin-top: 1rem; margin-bottom: 0.5rem; font-weight: 600;">
+                            Your Thoughts
+                        </label>
+                        <textarea class="entry-textarea" id="entryContent" placeholder="Write freely here. What's on your mind? What emotions are you experiencing? What did you learn today?" required></textarea>
+
+                        <div class="entry-mood-selector">
+                            <label style="font-weight: 600;">How are you feeling?</label>
+                            <div class="entry-mood-options">
+                                <input type="radio" class="mood-radio" id="mood1" name="mood" value="😊 Excellent" data-emoji="😊">
+                                <input type="radio" class="mood-radio" id="mood2" name="mood" value="🙂 Good" data-emoji="🙂">
+                                <input type="radio" class="mood-radio" id="mood3" name="mood" value="😐 Okay" data-emoji="😐">
+                                <input type="radio" class="mood-radio" id="mood4" name="mood" value="😔 Not Great" data-emoji="😔">
+                                <input type="radio" class="mood-radio" id="mood5" name="mood" value="😢 Distressed" data-emoji="😢">
+                            </div>
+                        </div>
+
+                        <button type="submit" class="save-entry-btn" id="saveEntryBtn">
+                            <i class="fas fa-save"></i> Save Entry
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Privacy Notice -->
+            <div style="margin-top: 3rem; background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); border-left: 4px solid var(--primary-blue);">
+                <h3 style="color: var(--primary-blue); margin-bottom: 1rem;">
+                    <i class="fas fa-shield-alt"></i> Your Privacy is Protected
+                </h3>
+                <ul style="color: var(--text-secondary); line-height: 1.8;">
+                    <li>✅ All journal entries are completely private and encrypted</li>
+                    <li>✅ Only you can access your journal - admins cannot see it</li>
+                    <li>✅ Entries are stored securely on our servers</li>
+                    <li>✅ You can delete any entry at any time</li>
+                    <li>✅ Your data is never shared with third parties</li>
+                </ul>
+            </div>
+
+            <!-- Journal Tips -->
+            <div style="margin-top: 2rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+                <div style="background: var(--soft-lavender); padding: 1.5rem; border-radius: 8px;">
+                    <h4 style="color: var(--primary-blue); margin-bottom: 1rem;"><i class="fas fa-lightbulb"></i> Journaling Tips</h4>
+                    <ul style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.7;">
+                        <li>Write without judgment</li>
+                        <li>Be honest with yourself</li>
+                        <li>Focus on your feelings</li>
+                        <li>Reflect on patterns</li>
+                    </ul>
+                </div>
+                <div style="background: var(--light-teal); padding: 1.5rem; border-radius: 8px;">
+                    <h4 style="color: var(--primary-blue); margin-bottom: 1rem;"><i class="fas fa-star"></i> Benefits of Journaling</h4>
+                    <ul style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.7;">
+                        <li>Process emotions</li>
+                        <li>Track progress</li>
+                        <li>Reduce stress</li>
+                        <li>Gain perspective</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>SafeSpace</h4>
+                    <p>Your mental health journey matters. We're here to support you.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="dashboard.html">Dashboard</a></li>
+                        <li><a href="mood-tracker.html">Mood Tracker</a></li>
+                        <li><a href="support.html">Support Feed</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 SafeSpace. All rights reserved. | Your Private Space</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

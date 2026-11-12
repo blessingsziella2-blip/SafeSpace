@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notifications - SafeSpace</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-brand">
+                <h1>SafeSpace</h1>
+                <p class="tagline">Your Safe Haven for Mental Wellness</p>
+            </div>
+            <ul class="nav-links">
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="notifications.html" class="active">Notifications</a></li>
+                <li><a href="profile-settings.html">Settings</a></li>
+                <li><a href="index.html" class="btn-nav" onclick="logout()">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Notifications Header -->
+    <div class="notifications-header">
+        <div class="container">
+            <h1>Notifications</h1>
+            <p>Stay updated with what's happening in your SafeSpace</p>
+        </div>
+    </div>
+
+    <!-- Notifications Content -->
+    <section style="padding: 3rem 0;">
+        <div class="container">
+            <!-- Filter Buttons -->
+            <div class="notifications-filter">
+                <button class="filter-btn active">All</button>
+                <button class="filter-btn">Support Replies</button>
+                <button class="filter-btn">Reminders</button>
+                <button class="filter-btn">Alerts</button>
+            </div>
+
+            <!-- Notifications List -->
+            <div class="notifications-container">
+                <!-- Recent Notification -->
+                <div class="notification">
+                    <div class="notification-icon">
+                        <i class="fas fa-reply"></i>
+                    </div>
+                    <div class="notification-content">
+                        <div class="notification-title">New Reply to Your Post</div>
+                        <div class="notification-message">
+                            "Someone responded to your post about anxiety with helpful coping strategies. Check it out!"
+                        </div>
+                        <div class="notification-time">Just now</div>
+                    </div>
+                    <div class="notification-action">
+                        <a href="support.html">View Post</a>
+                    </div>
+                </div>
+
+                <!-- Daily Mood Reminder -->
+                <div class="notification">
+                    <div class="notification-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <div class="notification-content">
+                        <div class="notification-title">Daily Mood Check-in</div>
+                        <div class="notification-message">
+                            "How are you feeling today? Take a minute to log your mood and see your progress."
+                        </div>
+                        <div class="notification-time">2 hours ago</div>
+                    </div>
+                    <div class="notification-action">
+                        <a href="mood-tracker.html">Log Mood</a>
+                    </div>
+                </div>
+
+                <!-- Support Alert -->
+                <div class="notification">
+                    <div class="notification-icon" style="color: var(--success);">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <div class="notification-content">
+                        <div class="notification-title">Support Services Available</div>
+                        <div class="notification-message">
+                            "New wellness resources just added to our Learning Center. Stress management tips available now."
+                        </div>
+                        <div class="notification-time">5 hours ago</div>
+                    </div>
+                    <div class="notification-action">
+                        <a href="resources.html">Explore</a>
+                    </div>
+                </div>
+
+                <!-- Community Update -->
+                <div class="notification">
+                    <div class="notification-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="notification-content">
+                        <div class="notification-title">Community Milestone</div>
+                        <div class="notification-message">
+                            "SafeSpace has reached 10,000 posts of support! Thank you for being part of this amazing community."
+                        </div>
+                        <div class="notification-time">1 day ago</div>
+                    </div>
+                </div>
+
+                <!-- Reply Notification -->
+                <div class="notification">
+                    <div class="notification-icon">
+                        <i class="fas fa-reply"></i>
+                    </div>
+                    <div class="notification-content">
+                        <div class="notification-title">Someone Appreciated Your Support</div>
+                        <div class="notification-message">
+                            "Your supportive comment helped someone today. Thank you for being part of the solution."
+                        </div>
+                        <div class="notification-time">2 days ago</div>
+                    </div>
+                    <div class="notification-action">
+                        <a href="support.html">View</a>
+                    </div>
+                </div>
+
+                <!-- Safety Alert -->
+                <div class="notification">
+                    <div class="notification-icon" style="color: var(--warning);">
+                        <i class="fas fa-bell"></i>
+                    </div>
+                    <div class="notification-content">
+                        <div class="notification-title">Weekly Check-in</div>
+                        <div class="notification-message">
+                            "How has your week been? Your wellness graph is waiting for you. Keep tracking your progress!"
+                        </div>
+                        <div class="notification-time">3 days ago</div>
+                    </div>
+                    <div class="notification-action">
+                        <a href="mood-tracker.html">Check In</a>
+                    </div>
+                </div>
+
+                <!-- Account Notification -->
+                <div class="notification">
+                    <div class="notification-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="notification-content">
+                        <div class="notification-title">Account Security</div>
+                        <div class="notification-message">
+                            "Your password was last changed 30 days ago. Consider updating it for security."
+                        </div>
+                        <div class="notification-time">1 week ago</div>
+                    </div>
+                    <div class="notification-action">
+                        <a href="profile-settings.html">Update</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Notification Settings Info -->
+            <div style="margin-top: 3rem; background: var(--light-gray); padding: 2rem; border-radius: 10px; text-align: center;">
+                <h3 style="color: var(--primary-blue); margin-bottom: 1rem;">
+                    <i class="fas fa-cog"></i> Manage Notifications
+                </h3>
+                <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">
+                    You can customize which notifications you receive in your Settings
+                </p>
+                <a href="profile-settings.html" class="btn btn-primary">Go to Settings</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>SafeSpace</h4>
+                    <p>Your mental health journey matters. We're here to support you.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="dashboard.html">Dashboard</a></li>
+                        <li><a href="support.html">Support Feed</a></li>
+                        <li><a href="resources.html">Resources</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 SafeSpace. All rights reserved. | Stay Connected</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

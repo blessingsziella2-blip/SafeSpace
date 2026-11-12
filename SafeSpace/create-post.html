@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Post - SafeSpace</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-brand">
+                <h1>SafeSpace</h1>
+                <p class="tagline">Your Safe Haven for Mental Wellness</p>
+            </div>
+            <ul class="nav-links">
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="support.html">Support Feed</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="profile-settings.html">Settings</a></li>
+                <li><a href="index.html" class="btn-nav" onclick="logout()">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Create Post Container -->
+    <div class="create-post-container">
+        <h2>Share Your Story</h2>
+        <p style="text-align: center; color: var(--text-secondary); margin-bottom: 2rem;">
+            Your post will be completely anonymous. Share your feelings, thoughts, and seek support from our community.
+        </p>
+
+        <form id="createPostForm">
+            <!-- What's on Your Mind -->
+            <div class="form-section">
+                <label for="postText">What's on Your Mind?</label>
+                <textarea id="postText" name="postText" placeholder="Share your thoughts, feelings, or questions here... Your post will be completely anonymous." maxlength="500" required></textarea>
+                <div class="char-count">0/500 characters</div>
+            </div>
+
+            <!-- How Are You Feeling? -->
+            <div class="form-section">
+                <label>How are you feeling?</label>
+                <div class="mood-grid">
+                    <div class="mood-choice" data-value="happy">
+                        <span>😊</span>
+                        <span class="mood-choice-label">Happy</span>
+                    </div>
+                    <div class="mood-choice" data-value="good">
+                        <span>🙂</span>
+                        <span class="mood-choice-label">Good</span>
+                    </div>
+                    <div class="mood-choice" data-value="neutral">
+                        <span>😐</span>
+                        <span class="mood-choice-label">Neutral</span>
+                    </div>
+                    <div class="mood-choice" data-value="sad">
+                        <span>😔</span>
+                        <span class="mood-choice-label">Sad</span>
+                    </div>
+                    <div class="mood-choice" data-value="distressed">
+                        <span>😢</span>
+                        <span class="mood-choice-label">Distressed</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Trigger Warnings -->
+            <div class="form-section">
+                <label>Add Trigger Warnings (if applicable)</label>
+                <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1rem;">Help others by warning about sensitive topics in your post</p>
+                <div class="warning-tags">
+                    <div class="warning-tag" data-warning="anxiety">⚠️ Anxiety</div>
+                    <div class="warning-tag" data-warning="depression">⚠️ Depression</div>
+                    <div class="warning-tag" data-warning="stress">⚠️ Stress</div>
+                    <div class="warning-tag" data-warning="trauma">⚠️ Trauma</div>
+                    <div class="warning-tag" data-warning="suicidal">⚠️ Suicidal Thoughts</div>
+                    <div class="warning-tag" data-warning="selfharm">⚠️ Self-Harm</div>
+                </div>
+            </div>
+
+            <!-- Anonymous Posting -->
+            <div class="form-section">
+                <label>Anonymity Options</label>
+                <div class="form-group checkbox">
+                    <input type="checkbox" id="anonymousOption" name="anonymous" checked>
+                    <label for="anonymousOption">Post as "Anonymous" (recommended for privacy)</label>
+                </div>
+                <small style="color: var(--text-secondary);">Your identity will always be protected. This option determines your display name.</small>
+            </div>
+
+            <!-- Form Actions -->
+            <div style="display: flex; gap: 1rem; margin-top: 2rem;">
+                <button type="submit" class="btn btn-primary" style="flex: 1;">
+                    <i class="fas fa-paper-plane"></i> Post Anonymously
+                </button>
+                <a href="support.html" class="btn btn-secondary" style="flex: 1; text-align: center;">Cancel</a>
+            </div>
+        </form>
+
+        <div style="background: var(--light-gray); padding: 1.5rem; border-radius: 8px; margin-top: 2rem;">
+            <h3 style="color: var(--primary-blue); margin-bottom: 1rem;">Community Guidelines</h3>
+            <ul style="color: var(--text-secondary); line-height: 1.8;">
+                <li>✅ Be respectful and supportive</li>
+                <li>✅ Share your genuine feelings</li>
+                <li>✅ Use content warnings appropriately</li>
+                <li>❌ No harassment or hate speech</li>
+                <li>❌ No spam or promotional content</li>
+                <li>❌ No sharing of personal information</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>SafeSpace</h4>
+                    <p>Your mental health journey matters. We're here to support you.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="dashboard.html">Dashboard</a></li>
+                        <li><a href="support.html">Support Feed</a></li>
+                        <li><a href="resources.html">Resources</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 SafeSpace. All rights reserved. | Anonymous & Safe</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
